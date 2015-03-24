@@ -1,2 +1,2 @@
-# BukkitPluginBarebones
-This is the skeleton for creating a Bukkit plugin. Based off the plugin tutorial found on the bukkit page.
+# GoIntoTheLight
+Bukkit plugin for navigating to various objectives with a particle or sparkle effect in front of the player
