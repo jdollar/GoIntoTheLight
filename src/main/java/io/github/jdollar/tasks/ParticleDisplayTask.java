@@ -30,9 +30,10 @@ public class ParticleDisplayTask extends BukkitRunnable {
     @Override
     public void run() {
         if (particleCount <= particleLimit) {
-            particleEffects.sendToPlayer(player);
+            particleEffects.sendToPlayer(player, 10);
             particleCount++;
         } else {
+            particleEffects.setPacketCount(0);
             this.cancel();
         }
     }

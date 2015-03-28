@@ -7,9 +7,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-/**
- * Created by jdollar on 3/24/2015.
- */
 public class PlayerListener implements Listener {
     private JavaPlugin javaPlugin;
     private ParticleDisplayTask particleDisplayTask;
@@ -22,10 +19,10 @@ public class PlayerListener implements Listener {
     public void onDropItem(PlayerDropItemEvent playerDropItemEvent) {
         try {
             particleDisplayTask = new ParticleDisplayTask(javaPlugin,
-                                                          10,
-                                                          ParticleEffects.CRIT,
+                                                          30,
+                                                          ParticleEffects.CRIT_MAGIC,
                                                           playerDropItemEvent.getPlayer());
-            particleDisplayTask.runTaskTimer(javaPlugin, 0L, 20L);
+            particleDisplayTask.runTaskTimer(javaPlugin, 0L, 1L);
         } catch (Exception e) {
             e.printStackTrace();
         }
